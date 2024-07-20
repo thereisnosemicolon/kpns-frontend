@@ -40,9 +40,9 @@ const handleLogin = async () => {
             <div>
                 <div class="w-full surface-card shadow-2 py-8 px-5 sm:px-8" style="border-radius: 53px">
                     <div class="text-center mb-5">
-                        <img :src="logoUrl" alt="Image" height="150" class="mb-3" />
-                        <!-- <div class="text-900 text-3xl font-medium mb-3">Coffelabs Back Office</div> -->
-                        <!-- <span class="text-600 font-medium">Sign in to continue</span> -->
+                        <!-- <img :src="logoUrl" alt="Image" height="150" class="mb-3" /> -->
+                        <div class="text-5xl font-medium mb-3 title-login">SiPitung Apps</div>
+                        <span class="text-600 font-medium">Sign in to continue</span>
                     </div>
                     <div>
                         <label for="email1" class="block text-900 text-xl font-medium mb-2">Email</label>
@@ -59,7 +59,7 @@ const handleLogin = async () => {
                             <!-- <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Sign Up Here</a>
                             <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Forgot password?</a> -->
                         </div>
-                        <Button :loading="loading" label="Sign In" class="w-full p-3 text-xl" @click="handleLogin" />
+                        <Button :loading="loading" label="Sign In" class="w-full p-3 text-xl sign-in" @click="handleLogin" />
                         <!-- <ProgressSpinner class="text-center" v-if="loading" style="width: 50px; height: 50px; margin-top: 10px" /> -->
                     </div>
                 </div>
@@ -79,4 +79,19 @@ const handleLogin = async () => {
     transform: scale(1.6);
     margin-right: 1rem;
 }
+
+.title-login{
+    color: #45a049;
+}
+
+.sign-in{
+    background-color: #45a049;
+    color: white;
+    border: none;
+}
+
+.sign-in:hover {
+  background-color: green;
+}
+
 </style>

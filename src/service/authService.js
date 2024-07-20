@@ -3,13 +3,13 @@
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
-const API_URL = 'https://backend.coffeelabs.id/api'; // Replace with your API URL
-// const API_URL = 'https://backend.coffeelabs.id/api'; // Replace with your API URL
-// const API_URL = 'http://192.168.1.18:8000/api'; // Replace with your API URL
+// const API_URL = 'https://backend.coffeelabs.id/api'; // prod
+const API_URL = 'http://127.0.0.1:8000/api'; // local
 
 export const login = async (email, password) => {
     try {
         const response = await axios.post(`${API_URL}/auth/login`, { email, password });
+        console.log(response);
         if (response.data.status === 'error') {
             throw new Error(response.data.message);
         }
