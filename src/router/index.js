@@ -16,6 +16,12 @@ const router = createRouter({
             meta: { requiresGuest: true } // Only accessible by guests (not logged in)
         },
         {
+            path: '/register',
+            component: PublicLayout,
+            children: [{ path: '/register', component: () => import('@/views/pages/auth/Register.vue') }],
+            meta: { requiresGuest: true } // Only accessible by guests (not logged in)
+        },
+        {
             path: '/app',
             component: PrivateLayout,
             meta: { requiresAuth: true },
